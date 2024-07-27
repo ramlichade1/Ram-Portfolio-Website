@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Personal Portfolio Website HTML CSS Javascript | Ram</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        /* Basic styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #081b28;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+    color: var(--text-color);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.navbar a.active {
+    color: #007bff;
+}
+
+.navbar a:hover {
+    color: #0056b3;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+}
+
+/* Mobile Menu styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.mobile-navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.mobile-navbar a:hover {
+    color: #007bff;
+}
+
+.close-menu {
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- header design -->
+     <!-- <header class="header">
+        <a href="#" class="logo">Ram.</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+
+            <span class="active-nav"></span>
+        </nav>
+    </header> -->
+
+    <header class="header">
+        <a href="#" class="logo">Ram.</a>
+        <div class="menu-icon" id="menu-icon">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="close-menu" id="close-menu">&times;</div>
+        <nav class="mobile-navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+    <!-- home section design -->
+     <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'am <span>Ram</span></h1>
+            <div class="text-animate">
+                <h3>Web Developer</h3>
+            </div>
+            <p>Enthusiastic Electronics and Telecommunications graduate with hands-on experience in web development, DSA, and AI projects. Proficient in Java, Python, and SQL. Adept at problem-solving and passionate about leveraging technology to drive innovative solutions.</p>
+
+            <div class="btn-box">
+                <a href="https://drive.google.com/file/d/1BzTBzkNuCGds6QS9miSSWUxZLFbxquXl/view?usp=drivesdk" class="btn">My Resume</a>
+                <a href="https://www.linkedin.com/in/ram-lichade-64963022b/" class="btn">Let's Connect</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://leetcode.com/u/ramlichade1/"><i class='bx bx-code-alt' ></i></a>
+            <a href="https://github.com/ramlichade1"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/ram-lichade-64963022b/"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <div class="home-imgHover"></div>
+     </section>
+    <!-- about section design -->
+     <section class="about" id="about">
+        <h2 class="heading">About <span>Me</span></h2>
+
+        <div class="about-img">
+            <img src="About me.png" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h3>Web Developer</h3>
+            <p>I am an enthusiastic Electronics and Telecommunications graduate with a strong background in web development, data structures, and artificial intelligence. Skilled in Java, Python, SQL, and web technologies, I have hands-on experience working on diverse projects, including AI-driven plant disease detection and web applications. My role as Operations Lead at Google Developers Students Club honed my project management and leadership abilities. With a consistent track record of coding and problem-solving, I am passionate about leveraging technology to develop innovative solutions. My goal is to contribute to dynamic teams and drive technological advancements in a challenging software engineering role.
+
+            </p>
+            <div class="btn-box btns">
+                <a href="https://drive.google.com/file/d/1BzTBzkNuCGds6QS9miSSWUxZLFbxquXl/view?usp=drivesdk" class="btn">Resume</a>
+            </div>
+        </div>
+     </section>
+    <!-- education section design -->
+     <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calender'></i>2021 - 2025</div>
+                            <h3>Bachlor of Technology - J D College of Engineering and Management, Nagpur</h3>
+                            <p>Graduated with a degree in Electronics and Telecommunications from J.D. College of Engineering and Management, Nagpur, with a CGPA of 8.29. Gained comprehensive knowledge in electronics, telecommunications, and software development, preparing for a career in technology and engineering.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calender'></i>2019 - 2021</div>
+                            <h3>Shirdi Sai Junior College, Mouda</h3>
+                            <p>Completed XII (HSC) from Shirdi Sai Junior College, Mouda with an impressive 85.17% in 2021. Demonstrated strong academic performance and foundational knowledge in core subjects, laying a solid groundwork for advanced studies in Electronics and Telecommunications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-column">
+                <h3 class="title">Experience</h3>
+
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calender'></i>June 2023 - July 2023</div>
+                            <h3>Web Developer - Oasis Infobyte</h3>
+                            <p>Completed a one-month internship at Oasis Infobyte, developing web applications including a Calculator App, Fitness Website, and Portfolio Website. Gained practical experience in web development and improved skills in HTML, CSS, JavaScript, and project implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- skills section design -->
+     <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Coding Skills</h3>
+
+                <div class="">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>HTML <span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>CSS <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>JavaScript <span>70%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Java <span>85%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Professional Skills</h3>
+
+                <div class="">
+                    <div class="skills-content">
+                        <div class="progress">
+                            <h3>Web Developement<span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Problem Solver <span>80%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Communication <span>95%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+
+                        <div class="progress">
+                            <h3>Team Leadership<span>90%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </section>
+    <!-- contact section design -->
+     <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form actions="a">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Adress" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+     </section>
+    <!-- footer design -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Ram | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
